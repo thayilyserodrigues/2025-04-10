@@ -1,12 +1,234 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<title>Minha Primeira Página - THAILYSE NASCIMENTO RODRIGUES</title>
-</head>
-<body>
+<html lang="pt-br">
 
-<h1>Olá, mundo!</h1>
-<p>Esta é minha primeira página publicada no GitHub Pages.</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root {
+            --roxo-pastel: #d8b4fe;
+            --roxo-escuro: #5b21b6;
+            --roxo-claro: #c4b5fd;
+            --roxo-medio: #8b5cf6;
+        }
+        
+        body {
+            background-color: var(--roxo-pastel);
+            color: var(--roxo-escuro);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .card {
+            background-color: white;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .badge {
+            background-color: var(--roxo-medio) !important;
+            color: white;
+            margin-right: 5px;
+            font-weight: normal;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            color: var(--roxo-escuro);
+            font-weight: 600;
+        }
+        
+        a {
+            color: var(--roxo-escuro);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: var(--roxo-medio);
+            text-decoration: underline;
+        }
+        
+        .btn-link {
+            color: var(--roxo-medio);
+        }
+        
+        .btn-link:hover {
+            color: var(--roxo-escuro);
+        }
+        
+        .modal-content {
+            border-radius: 15px;
+        }
+        
+        .rounded-circle {
+            border: 5px solid var(--roxo-claro);
+        }
+        
+        footer {
+            background-color: var(--roxo-claro);
+            border-radius: 15px 15px 0 0;
+        }
+    </style>
+    <title>Portfólio de Thailyse</title>
+</head>
+
+<body>
+    <header class="container text-center py-5">
+        <img src="https://via.placeholder.com/150" alt="Avatar de Thailyse" class="rounded-circle" width="150" height="150">
+        <p class="lead mt-3">Olá, eu sou</p>
+        <h1 class="display-4 fw-bold">Thailyse</h1>
+        <p class="fs-5">Estudante do Colégio Dom Pedro II, apaixonada por aprendizado e tecnologia</p>
+        <p>Atualmente cursando o Ensino Médio em uma das instituições de ensino mais tradicionais do Brasil, busco constantemente expandir meus conhecimentos e desenvolver novas habilidades.</p>
+        <p>Minhas habilidades</p>
+        <div class="mt-3">
+            <span class="badge">Estudante dedicada</span>
+            <span class="badge">Trabalho em equipe</span>
+            <span class="badge">Organização</span>
+            <span class="badge">Criatividade</span>
+        </div>
+    </header>
+    <main class="container mt-5">
+        <h2 class="text-center mb-5">Meus projetos acadêmicos</h2>
+        <div class="row g-4">
+            <!-- Projeto 1 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x200?text=Projeto+Escolar" class="card-img-top" alt="Projeto de Ciências">
+                    <div class="card-body">
+                        <h5 class="card-title">Feira de Ciências: Sustentabilidade</h5>
+                        <p class="card-text">Projeto desenvolvido para a feira de ciências do colégio, abordando soluções sustentáveis para problemas ambientais contemporâneos. Pesquisa aprofundada e desenvolvimento de protótipos.</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal1">Saiba mais</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Projeto 2 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x200?text=Projeto+Literário" class="card-img-top" alt="Projeto Literário">
+                    <div class="card-body">
+                        <h5 class="card-title">Clube de Leitura: Literatura Brasileira</h5>
+                        <p class="card-text">Participação ativa no clube de leitura da escola, com análise crítica de obras da literatura brasileira e organização de debates mensais sobre os livros lidos.</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal2">Saiba mais</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 3 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x200?text=Projeto+Tecnológico" class="card-img-top" alt="Projeto Tecnológico">
+                    <div class="card-body">
+                        <h5 class="card-title">Olimpíada de Matemática</h5>
+                        <p class="card-text">Participação nas olimpíadas de matemática promovidas pelo colégio, com destaque em resolução de problemas complexos e trabalho em equipe para solucionar desafios.</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal3">Saiba mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Feira de Ciências: Sustentabilidade</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Este projeto foi desenvolvido para a feira anual de ciências do Colégio Dom Pedro II, com o tema central "Soluções Sustentáveis para o Século XXI". Nosso grupo focou em desenvolver alternativas viáveis para reduzir o desperdício de água em ambientes urbanos.</p>
+                    <p>Durante três meses de pesquisa, investigamos sistemas de captação de água da chuva e desenvolvemos um protótipo em escala reduzida que demonstrava como essa tecnologia poderia ser implementada em residências. O projeto incluiu:</p>
+                    <ul>
+                        <li>Pesquisa sobre o ciclo da água e consumo residencial</li>
+                        <li>Desenvolvimento de maquete demonstrativa</li>
+                        <li>Cálculos de economia potencial</li>
+                        <li>Proposta de implementação em larga escala</li>
+                    </ul>
+                    <p>O projeto foi premiado com menção honrosa pela abordagem prática e pelo potencial de aplicação real. Essa experiência me ensinou a importância do trabalho em equipe e da pesquisa científica para solucionar problemas reais.</p>
+                    <img src="https://via.placeholder.com/800x400?text=Feira+de+Ciências" class="img-fluid w-100 rounded mb-3" alt="Feira de Ciências">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 2 -->
+    <div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Clube de Leitura: Literatura Brasileira</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Como membro ativo do clube de leitura do Colégio Dom Pedro II, participei da organização e condução de debates mensais sobre obras clássicas e contemporâneas da literatura brasileira. Nosso objetivo era promover o hábito da leitura e desenvolver habilidades de análise crítica entre os alunos.</p>
+                    <p>Algumas das atividades que desenvolvi no clube incluem:</p>
+                    <ul>
+                        <li>Mediação de discussões sobre obras como "Dom Casmurro" (Machado de Assis) e "Capitães da Areia" (Jorge Amado)</li>
+                        <li>Pesquisa sobre contextos históricos das obras</li>
+                        <li>Preparação de materiais de apoio para os debates</li>
+                        <li>Organização de saraus literários</li>
+                    </ul>
+                    <p>Essa experiência enriqueceu muito meu vocabulário e capacidade de expressão, além de ter me proporcionado um conhecimento mais profundo sobre nossa cultura e história através da literatura. Foi também uma oportunidade valiosa para desenvolver habilidades de oratória e trabalho em grupo.</p>
+                    <img src="https://via.placeholder.com/800x400?text=Clube+de+Leitura" class="img-fluid w-100 rounded mb-3" alt="Clube de Leitura">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Olimpíada de Matemática</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Participar das olimpíadas de matemática do Colégio Dom Pedro II foi uma das experiências mais desafiadoras e gratificantes da minha vida acadêmica. Essas competições não testam apenas conhecimento, mas também criatividade, persistência e capacidade de resolver problemas sob pressão.</p>
+                    <p>Minha preparação incluiu:</p>
+                    <ul>
+                        <li>Estudo de tópicos avançados de matemática</li>
+                        <li>Resolução de problemas de edições anteriores</li>
+                        <li>Participação em grupos de estudo</li>
+                        <li>Desenvolvimento de estratégias para competição</li>
+                    </ul>
+                    <p>Embora desafiador, o processo me ensinou valiosas lições sobre disciplina, gestão do tempo e a importância de não desistir diante das dificuldades. A matemática olímpica é muito diferente da matemática escolar tradicional - ela exige pensamento lateral, criatividade e a capacidade de conectar conceitos aparentemente desconexos.</p>
+                    <p>Essa experiência não apenas melhorou minhas habilidades matemáticas, mas também me mostrou como enfrentar desafios complexos de forma estruturada e perseverante.</p>
+                    <img src="https://via.placeholder.com/800x400?text=Olimpíada+de+Matemática" class="img-fluid w-100 rounded mb-3" alt="Olimpíada de Matemática">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container py-5 mt-5">
+        <h2 class="text-center mb-4">Entre em contato</h2>
+        <div class="d-flex justify-content-center gap-4">
+            <div class="text-center">
+                <i class="bi bi-envelope fs-3"></i>
+                <p>Email escolar</p>
+            </div>
+            <div class="text-center">
+                <i class="bi bi-person-lines-fill fs-3"></i>
+                <p>Coordenação do Colégio</p>
+            </div>
+        </div>
+        <p class="my-5 text-center">© Copyright 2024. Produzido por Thailyse - Estudante do Colégio Dom Pedro II</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
